@@ -1,10 +1,6 @@
-/* ============================================================
-   1) PEGÁ ACÁ el enlace público de tu CV cuando lo publiques.
-      Si lo dejás vacío, el QR usa la dirección de la página abierta.
-   ============================================================ */
-const PUBLIC_URL = "";
+const PUBLIC_URL = "https://luzanetti.github.io/cv_digital2026/";
 
-/* ---------- Modo claro / oscuro ---------- */
+/*  Modo claro / oscuro  */
 const root = document.documentElement;
 const themeBtn = document.getElementById("btn-theme");
 const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -28,14 +24,14 @@ themeBtn.addEventListener("click", () => {
   paintThemeButton();
 });
 
-/* ---------- Guardar como PDF ---------- */
+/*  Guardar PDF */
 document.getElementById("btn-print").addEventListener("click", () => {
   // Abre todas las experiencias para que salgan completas en el PDF
   document.querySelectorAll("details").forEach(d => d.open = true);
   window.print();
 });
 
-/* ---------- QR ---------- */
+/*  QR D: */
 const dialog = document.getElementById("qr-dialog");
 const qrBox = document.getElementById("qr-box");
 const qrUrl = document.getElementById("qr-url");
